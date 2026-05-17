@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storystak AI — Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+  :root {
+    --bronze-spice: #c45d2c;
+    --coffee-bean: #210f07;
+    --powder-petal: #f7e3da;
+    --snow: #fcf7f5;
+    --onyx: #0f0f0f;
+
+    --font-logo: 'EB Garamond', serif;
+    --font-display: 'Instrument Serif', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--snow);
+    color: var(--coffee-bean);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+  }
+
+  /* HEADER */
+  header.brand-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--coffee-bean);
+    margin-bottom: 72px;
+  }
+
+  .brand-header .title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--coffee-bean);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .brand-header .title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--bronze-spice);
+  }
+  .brand-header .title .header-logo {
+    height: 64px;
+    width: auto;
+    display: block;
+  }
+  .brand-header .title .divider {
+    display: inline-block;
+    width: 1px;
+    height: 48px;
+    background: var(--coffee-bean);
+    opacity: 0.25;
+  }
+
+  .brand-header .meta {
+    font-family: var(--font-body);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--coffee-bean);
+    opacity: 0.7;
+    text-align: right;
+  }
+  .brand-header .meta div + div { margin-top: 4px; }
+
+  /* SECTION */
+  section { margin-bottom: 96px; scroll-margin-top: 24px; }
+
+  .section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--bronze-spice);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--coffee-bean);
+    margin-bottom: 12px;
+  }
+  .section-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--bronze-spice);
+  }
+
+  .section-intro {
+    font-size: 16px;
+    color: var(--coffee-bean);
+    opacity: 0.75;
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+
+  /* LOGOS */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .logo-card {
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--snow);
+  }
+
+  .logo-card .preview {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  .logo-card .preview:hover { opacity: 0.92; }
+  .logo-card .preview .download-hint {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(252, 247, 245, 0.92);
+    color: var(--coffee-bean);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+  .logo-card .preview.bg-coffee .download-hint,
+  .logo-card .preview.bg-bronze .download-hint {
+    background: rgba(15, 15, 15, 0.7);
+    color: var(--snow);
+  }
+  .logo-card .preview:hover .download-hint { opacity: 1; }
+
+  .logo-card .preview img,
+  .logo-card .preview svg {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .logo-card .preview.bg-snow { background: var(--snow); }
+  .logo-card .preview.bg-powder { background: var(--powder-petal); }
+  .logo-card .preview.bg-coffee { background: var(--coffee-bean); }
+  .logo-card .preview.bg-bronze { background: var(--bronze-spice); }
+
+  .logo-card .info {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(33, 15, 7, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .logo-card .info .name {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--coffee-bean);
+  }
+
+  .logo-card .info .usage {
+    font-size: 11px;
+    color: var(--coffee-bean);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .logo-card .downloads {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(33, 15, 7, 0.08);
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .logo-card .downloads a {
+    color: var(--bronze-spice);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  .logo-card .downloads a:hover { text-decoration: underline; }
+
+  .logo-section-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--bronze-spice);
+    margin: 56px 0 20px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .logo-section-title:first-child { margin-top: 0; }
+
+  /* COLOR */
+  .color-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .color-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .color-card {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .color-swatch {
+    height: 180px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .color-swatch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 15, 7, 0.12);
+  }
+  .color-swatch:active {
+    transform: translateY(0);
+  }
+  .color-swatch .copy-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(252, 247, 245, 0.92);
+    color: var(--coffee-bean);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .color-swatch.dark .copy-hint {
+    background: rgba(15, 15, 15, 0.7);
+    color: var(--snow);
+  }
+  .color-swatch:hover .copy-hint { opacity: 1; }
+  .color-swatch.copied .copy-hint {
+    opacity: 1;
+    background: var(--bronze-spice);
+    color: var(--snow);
+  }
+
+  .color-card .hex {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .color-card .hex:hover {
+    color: var(--bronze-spice);
+  }
+
+  /* TOAST */
+  .toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--coffee-bean);
+    color: var(--snow);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    box-shadow: 0 8px 24px rgba(33, 15, 7, 0.2);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .toast .toast-hex {
+    color: var(--bronze-spice);
+    font-family: 'DM Sans', monospace;
+    margin-left: 6px;
+  }
+
+  .color-swatch .role-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(252, 247, 245, 0.92);
+    color: var(--coffee-bean);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+  .color-swatch.dark .role-tag {
+    background: rgba(15, 15, 15, 0.7);
+    color: var(--snow);
+  }
+
+  .color-info {
+    padding: 16px 18px;
+    background: var(--snow);
+  }
+
+  .color-info .name {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--coffee-bean);
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .color-info .hex {
+    font-family: 'DM Sans', monospace;
+    font-size: 13px;
+    color: var(--coffee-bean);
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+  .color-info .rgb {
+    font-size: 11px;
+    color: var(--coffee-bean);
+    opacity: 0.6;
+    letter-spacing: 0.04em;
+  }
+  .color-info .usage {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(33, 15, 7, 0.08);
+    font-size: 11px;
+    color: var(--coffee-bean);
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  /* TYPOGRAPHY */
+  .type-block {
+    border-top: 1px solid rgba(33, 15, 7, 0.12);
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .type-block:last-child { border-bottom: 1px solid rgba(33, 15, 7, 0.12); }
+
+  @media (max-width: 760px) {
+    .type-block { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  .type-meta .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--bronze-spice);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .type-meta .family {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--coffee-bean);
+    margin-bottom: 8px;
+  }
+  .type-meta .role {
+    font-size: 13px;
+    color: var(--coffee-bean);
+    opacity: 0.7;
+    line-height: 1.5;
+  }
+
+  .type-sample.logo {
+    display: flex;
+    align-items: center;
+  }
+  .type-sample.logo .logo-type-sample {
+    height: 96px;
+    width: auto;
+    display: block;
+  }
+
+  .type-sample.display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1;
+    color: var(--coffee-bean);
+    letter-spacing: -0.015em;
+  }
+  .type-sample.display em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--bronze-spice);
+  }
+  .type-sample.display .scale {
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .type-sample.display .scale span { color: var(--coffee-bean); }
+  .type-sample.display .scale .lg { font-size: 40px; }
+  .type-sample.display .scale .md { font-size: 28px; }
+  .type-sample.display .scale .sm { font-size: 20px; }
+
+  .type-sample.body {
+    font-family: var(--font-body);
+  }
+  .type-sample.body .weights {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .type-sample.body .weights span {
+    font-size: 22px;
+    color: var(--coffee-bean);
+  }
+  .type-sample.body .w-light { font-weight: 300; }
+  .type-sample.body .w-regular { font-weight: 400; }
+  .type-sample.body .w-medium { font-weight: 500; }
+  .type-sample.body .w-semibold { font-weight: 600; }
+  .type-sample.body .w-bold { font-weight: 700; }
+
+  .type-sample.body .para {
+    max-width: 560px;
+    font-size: 15px;
+    color: var(--coffee-bean);
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+
+  /* USAGE NOTES (lightweight, since "essentials only") */
+  .usage-pair {
+    background: var(--powder-petal);
+    border-radius: 4px;
+    padding: 24px 28px;
+    margin-top: 32px;
+    font-size: 14px;
+    color: var(--coffee-bean);
+    line-height: 1.6;
+  }
+  .usage-pair strong {
+    font-weight: 600;
+    color: var(--bronze-spice);
+  }
+
+  /* ICONS */
+  .icon-subhead {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--bronze-spice);
+    margin: 40px 0 20px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .icon-subhead:first-of-type { margin-top: 0; }
+
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 900px) {
+    .icon-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .icon-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .icon-tile {
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    padding: 24px 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: var(--snow);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .icon-tile:hover {
+    border-color: var(--bronze-spice);
+    transform: translateY(-2px);
+  }
+  .icon-tile i {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .icon-tile.bronze i { color: var(--bronze-spice); }
+  .icon-tile.coffee i { color: var(--coffee-bean); }
+  .icon-tile .label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--coffee-bean);
+    opacity: 0.7;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  /* In-context icon row */
+  .icon-context {
+    margin-top: 32px;
+    background: var(--powder-petal);
+    border-radius: 4px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 700px) {
+    .icon-context { grid-template-columns: 1fr; }
+  }
+  .icon-context .ctx {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .icon-context .ctx .ctx-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .icon-context .ctx i {
+    font-size: 28px;
+    color: var(--bronze-spice);
+    line-height: 1;
+  }
+  .icon-context .ctx .ctx-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--coffee-bean);
+  }
+  .icon-context .ctx .ctx-body {
+    font-size: 13px;
+    color: var(--coffee-bean);
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+
+  /* VOICE */
+  .voice-subhead {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--bronze-spice);
+    margin: 56px 0 20px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .voice-subhead:first-of-type { margin-top: 0; }
+
+  .pull-quote {
+    border-left: 3px solid var(--bronze-spice);
+    padding: 8px 0 8px 24px;
+    margin: 0 0 24px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--coffee-bean);
+    letter-spacing: -0.005em;
+  }
+  .pull-quote strong {
+    font-weight: 600;
+    color: var(--bronze-spice);
+  }
+  .pull-quote .attribution {
+    display: block;
+    margin-top: 12px;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--coffee-bean);
+    opacity: 0.6;
+    font-weight: 600;
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 720px) {
+    .principles-grid { grid-template-columns: 1fr; }
+  }
+  .principle {
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    padding: 24px 24px 22px;
+    background: var(--snow);
+  }
+  .principle .num {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--bronze-spice);
+    letter-spacing: 0.18em;
+    margin-bottom: 6px;
+  }
+  .principle .title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--coffee-bean);
+    margin-bottom: 8px;
+  }
+  .principle .body {
+    font-size: 13px;
+    color: var(--coffee-bean);
+    opacity: 0.78;
+    line-height: 1.55;
+  }
+  .principle .body strong {
+    font-weight: 600;
+    color: var(--bronze-spice);
+    opacity: 1;
+  }
+
+  /* Vocabulary table */
+  .vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .vocab-table thead th {
+    background: var(--powder-petal);
+    color: var(--coffee-bean);
+    text-align: left;
+    padding: 14px 18px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+  }
+  .vocab-table tbody td {
+    padding: 14px 18px;
+    border-top: 1px solid rgba(33, 15, 7, 0.08);
+    color: var(--coffee-bean);
+    line-height: 1.4;
+    vertical-align: top;
+  }
+  .vocab-table tbody tr:first-child td { border-top: none; }
+  .vocab-table .retire {
+    color: var(--coffee-bean);
+    opacity: 0.5;
+    text-decoration: line-through;
+    font-style: italic;
+  }
+  .vocab-table .replace {
+    color: var(--bronze-spice);
+    font-weight: 500;
+  }
+
+  /* Mirror phrases */
+  .mirror-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 720px) {
+    .mirror-list { grid-template-columns: 1fr; }
+  }
+  .mirror {
+    background: var(--powder-petal);
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--coffee-bean);
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+  }
+  .mirror::before {
+    content: '"';
+    color: var(--bronze-spice);
+    font-weight: 600;
+    margin-right: 2px;
+  }
+  .mirror::after {
+    content: '"';
+    color: var(--bronze-spice);
+    font-weight: 600;
+    margin-left: 2px;
+  }
+
+  /* What we are / are not */
+  .are-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 720px) {
+    .are-grid { grid-template-columns: 1fr; }
+  }
+  .are-card {
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    padding: 24px 28px;
+  }
+  .are-card.are { background: var(--snow); border-color: var(--bronze-spice); }
+  .are-card.are-not { background: var(--snow); }
+  .are-card .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .are-card.are .label { color: var(--bronze-spice); }
+  .are-card.are-not .label { color: var(--coffee-bean); opacity: 0.6; }
+  .are-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .are-card li {
+    font-size: 14px;
+    color: var(--coffee-bean);
+    line-height: 1.5;
+    padding: 8px 0;
+    border-top: 1px solid rgba(33, 15, 7, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .are-card li:first-child { border-top: none; padding-top: 0; }
+  .are-card li i {
+    font-size: 16px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .are-card.are li i { color: var(--bronze-spice); }
+  .are-card.are-not li { color: var(--coffee-bean); opacity: 0.7; }
+  .are-card.are-not li i { color: var(--coffee-bean); opacity: 0.5; }
+
+  /* DATA */
+  .data-subhead {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--bronze-spice);
+    margin: 56px 0 20px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .data-subhead:first-of-type { margin-top: 0; }
+
+  /* Hero stat */
+  .hero-stat {
+    background: var(--coffee-bean);
+    color: var(--snow);
+    border-radius: 4px;
+    padding: 48px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 720px) {
+    .hero-stat { grid-template-columns: 1fr; padding: 32px; gap: 28px; }
+  }
+  .hero-stat .stat-block .big {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--bronze-spice);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .hero-stat .stat-block .label {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--snow);
+    opacity: 0.85;
+    line-height: 1.45;
+    max-width: 280px;
+  }
+  .hero-stat .divider-v {
+    grid-column: span 2;
+    height: 1px;
+    background: rgba(252, 247, 245, 0.15);
+    margin: 0;
+  }
+  .hero-stat .meta {
+    grid-column: span 2;
+    font-family: var(--font-body);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--snow);
+    opacity: 0.5;
+    font-weight: 600;
+  }
+
+  /* Arc cards */
+  .arc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 760px) {
+    .arc-grid { grid-template-columns: 1fr; }
+  }
+  .arc-card {
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    padding: 28px 28px 24px;
+    background: var(--snow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .arc-card .arc-num {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--bronze-spice);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .arc-card .arc-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--coffee-bean);
+    margin-bottom: 4px;
+    line-height: 1.25;
+  }
+  .arc-card .when {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--coffee-bean);
+    opacity: 0.65;
+    font-style: italic;
+    line-height: 1.5;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(33, 15, 7, 0.08);
+    margin-bottom: 4px;
+  }
+  .arc-card .stat {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(33, 15, 7, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .arc-card .stat:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .arc-card .stat-number {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--coffee-bean);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .arc-card .stat-number strong {
+    color: var(--bronze-spice);
+    font-weight: 600;
+  }
+  .arc-card .stat-body {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--coffee-bean);
+    opacity: 0.78;
+    line-height: 1.45;
+  }
+  .arc-card .source {
+    font-family: var(--font-body);
+    font-size: 10px;
+    color: var(--coffee-bean);
+    opacity: 0.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* Financial case */
+  .financial-case {
+    background: var(--powder-petal);
+    border-radius: 4px;
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: center;
+    position: relative;
+  }
+  @media (max-width: 760px) {
+    .financial-case { grid-template-columns: 1fr; padding: 32px; gap: 24px; }
+  }
+  .financial-case .fc-step {
+    text-align: center;
+    position: relative;
+  }
+  .financial-case .fc-step::after {
+    content: "→";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bronze-spice);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .financial-case .fc-step:last-child::after { display: none; }
+  @media (max-width: 760px) {
+    .financial-case .fc-step::after {
+      right: 50%;
+      top: auto;
+      bottom: -16px;
+      transform: translateX(50%) rotate(90deg);
+    }
+  }
+  .financial-case .fc-num {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 44px;
+    color: var(--coffee-bean);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .financial-case .fc-num.accent { color: var(--bronze-spice); }
+  .financial-case .fc-label {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--coffee-bean);
+    opacity: 0.7;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--coffee-bean);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--coffee-bean);
+    opacity: 0.6;
+  }
+
+  /* NAV */
+  nav.toc {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 56px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(33, 15, 7, 0.2);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  nav.toc a {
+    color: var(--coffee-bean);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  nav.toc a:hover { opacity: 1; color: var(--bronze-spice); }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="brand-header">
+      <h1 class="title">
+        <img src="brand/Brand Assets/SVG/Storystak-ai-logo-primary.svg" alt="Storystak AI" class="header-logo">
+        <span class="divider"></span>
+        <span>Brand Guide</span>
+      </h1>
+      <div class="meta">
+        <div>Source of Truth</div>
+        <div>v1.0 · May 2026</div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <a href="#logos">Logos</a>
+      <a href="#colors">Color</a>
+      <a href="#typography">Typography</a>
+      <a href="#icons">Icons</a>
+      <a href="#voice">Voice</a>
+      <a href="#data">Data</a>
+    </nav>
+
+    <!-- LOGOS -->
+    <section id="logos">
+      <div class="section-label">01 · Identity</div>
+      <h2 class="section-title">Logos & <em>Icons</em></h2>
+      <p class="section-intro">The Storystak AI mark is a layered stack — three planes representing the layers of expertise we encode. Always use one of the locked variants below. Never recreate.</p>
+
+      <div class="logo-section-title">Full Logo</div>
+      <div class="logo-grid">
+        <div class="logo-card">
+          <a class="preview bg-snow" href="brand/Brand Assets/SVG/Storystak-ai-logo-primary.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-logo-primary-lg.png" alt="Storystak AI primary logo">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">Primary</span>
+            <span class="usage">Light backgrounds</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-logo-primary.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-logo-primary-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-logo-primary-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <a class="preview bg-coffee" href="brand/Brand Assets/SVG/Storystak-ai-logo-reverse.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-logo-reverse-lg.png" alt="Storystak AI reverse logo">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">Reverse</span>
+            <span class="usage">Dark backgrounds</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-logo-reverse.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-logo-reverse-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-logo-reverse-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <a class="preview bg-snow" href="brand/Brand Assets/SVG/Storystak-ai-logo-black.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-logo-black-lg.png" alt="Storystak AI black logo">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">Black (Monochrome)</span>
+            <span class="usage">Single-color print, B&amp;W</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-logo-black.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-logo-black-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-logo-black-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <a class="preview bg-bronze" href="brand/Brand Assets/SVG/Storystak-ai-logo-white.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-logo-white-lg.png" alt="Storystak AI white logo">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">White (Knockout)</span>
+            <span class="usage">Photos, colored bgs</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-logo-white.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-logo-white-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-logo-white-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-section-title">Icon</div>
+      <div class="logo-grid">
+        <div class="logo-card">
+          <a class="preview bg-snow" href="brand/Brand Assets/SVG/Storystak-ai-icon-primary.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-icon-primary-lg.png" alt="Storystak AI primary icon" style="max-height: 140px;">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">Primary</span>
+            <span class="usage">Light backgrounds</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-icon-primary.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-icon-primary-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-icon-primary-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <a class="preview bg-coffee" href="brand/Brand Assets/SVG/Storystak-ai-icon-reverse.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-icon-reverse-lg.png" alt="Storystak AI reverse icon" style="max-height: 140px;">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">Reverse</span>
+            <span class="usage">Dark backgrounds</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-icon-reverse.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-icon-reverse-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-icon-reverse-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <a class="preview bg-snow" href="brand/Brand Assets/SVG/Storystak-ai-icon-black.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-icon-black-lg.png" alt="Storystak AI black icon" style="max-height: 140px;">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">Black</span>
+            <span class="usage">Single-color print</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-icon-black.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-icon-black-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-icon-black-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <a class="preview bg-bronze" href="brand/Brand Assets/SVG/Storystak-ai-icon-white.svg" download title="Download SVG">
+            <img src="brand/Brand Assets/PNG L/Storystak-ai-icon-white-lg.png" alt="Storystak AI white icon" style="max-height: 140px;">
+            <span class="download-hint">Download SVG</span>
+          </a>
+          <div class="info">
+            <span class="name">White</span>
+            <span class="usage">Photos, colored bgs</span>
+          </div>
+          <div class="downloads">
+            <a href="brand/Brand Assets/SVG/Storystak-ai-icon-white.svg" download>SVG</a>
+            <a href="brand/Brand Assets/PNG L/Storystak-ai-icon-white-lg.png" download>PNG · Lg</a>
+            <a href="brand/Brand Assets/PNG S/Storystak-ai-icon-white-sm.png" download>PNG · Sm</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="usage-pair">
+        <strong>Use the icon</strong> for favicons, app tiles, social avatars, watermarks, and anywhere the full lockup is too wide to read. <strong>Use the full logo</strong> everywhere else — headers, decks, business cards, signatures, proposals.
+      </div>
+    </section>
+
+    <!-- COLORS -->
+    <section id="colors">
+      <div class="section-label">02 · Color</div>
+      <h2 class="section-title">Color <em>Palette</em></h2>
+      <p class="section-intro">A warm, grounded palette. Bronze Spice is the only accent — use it intentionally for emphasis, not as wallpaper. Coffee Bean does most of the typographic heavy lifting.</p>
+
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" data-hex="#C45D2C" style="background: #c45d2c;" title="Click to copy">
+            <span class="role-tag">Primary Accent</span>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="name">Bronze Spice</div>
+            <div class="hex" data-hex="#C45D2C" title="Click to copy">#C45D2C</div>
+            <div class="rgb">RGB 196 · 93 · 44</div>
+            <div class="usage">CTAs, highlights, italic accents, brand "AI" mark. Use sparingly for maximum impact.</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch dark" data-hex="#210F07" style="background: #210f07;" title="Click to copy">
+            <span class="role-tag">Primary Dark</span>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="name">Coffee Bean</div>
+            <div class="hex" data-hex="#210F07" title="Click to copy">#210F07</div>
+            <div class="rgb">RGB 33 · 15 · 7</div>
+            <div class="usage">All body text, headlines, dark backgrounds. Warmer than pure black.</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" data-hex="#F7E3DA" style="background: #f7e3da;" title="Click to copy">
+            <span class="role-tag">Surface</span>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="name">Powder Petal</div>
+            <div class="hex" data-hex="#F7E3DA" title="Click to copy">#F7E3DA</div>
+            <div class="rgb">RGB 247 · 227 · 218</div>
+            <div class="usage">Section backgrounds, cards, callouts, hover states. Adds warmth without competing.</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" data-hex="#FCF7F5" style="background: #fcf7f5; border-right: 1px solid rgba(33,15,7,0.08);" title="Click to copy">
+            <span class="role-tag">Base / Background</span>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="name">Snow</div>
+            <div class="hex" data-hex="#FCF7F5" title="Click to copy">#FCF7F5</div>
+            <div class="rgb">RGB 252 · 247 · 245</div>
+            <div class="usage">Default page background. Off-white with warm undertone — never use pure #FFFFFF.</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch dark" data-hex="#0F0F0F" style="background: #0f0f0f;" title="Click to copy">
+            <span class="role-tag">Pure Dark</span>
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="name">Onyx</div>
+            <div class="hex" data-hex="#0F0F0F" title="Click to copy">#0F0F0F</div>
+            <div class="rgb">RGB 15 · 15 · 15</div>
+            <div class="usage">Logo black, hard edges, technical contexts. Use Coffee Bean for text instead.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="usage-pair">
+        <strong>The 70/20/10 rule:</strong> 70% Snow + Powder Petal (surfaces), 20% Coffee Bean (text + structure), 10% Bronze Spice (accent). If Bronze Spice is doing more than 10% of the work, pull it back.
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section id="typography">
+      <div class="section-label">03 · Typography</div>
+      <h2 class="section-title">Type <em>System</em></h2>
+      <p class="section-intro">Three families, three jobs. Never substitute. EB Garamond is locked to the logo only — never use it for body or headlines.</p>
+
+      <div class="type-block">
+        <div class="type-meta">
+          <div class="label">Logo Mark Only</div>
+          <div class="family">EB Garamond</div>
+          <div class="role">Reserved exclusively for the Storystak AI wordmark. Do not use anywhere else.</div>
+        </div>
+        <div class="type-sample logo">
+          <img src="brand/Brand Assets/SVG/Storystak-ai-logo-primary.svg" alt="Storystak AI logo" class="logo-type-sample">
+        </div>
+      </div>
+
+      <div class="type-block">
+        <div class="type-meta">
+          <div class="label">Headlines & Display</div>
+          <div class="family">Instrument Serif</div>
+          <div class="role">Section titles, hero headlines, pull quotes. Use <em>italic</em> as a highlight — not for full sentences.</div>
+        </div>
+        <div class="type-sample display">
+          We turn your best people's <em>expertise</em> into AI systems your whole team can use.
+          <div class="scale">
+            <span class="lg">Display 56</span>
+            <span class="md">H2 — 40</span>
+            <span class="sm">H3 — 28</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-block">
+        <div class="type-meta">
+          <div class="label">Body & UI</div>
+          <div class="family">DM Sans</div>
+          <div class="role">Body copy, navigation, buttons, captions, forms, tables — everything that isn't a display headline or the logo.</div>
+        </div>
+        <div class="type-sample body">
+          <div class="weights">
+            <span class="w-light">Light — Captions and fine print</span>
+            <span class="w-regular">Regular — Body copy default</span>
+            <span class="w-medium">Medium — Subheads and labels</span>
+            <span class="w-semibold">Semibold — Buttons and emphasis</span>
+            <span class="w-bold">Bold — Stat callouts</span>
+          </div>
+          <p class="para">Clone the expertise. Standardize the quality. Unlock the capacity. Three pillars, one system. Body copy in DM Sans Regular at 15–16px sets the default voice — practical, direct, no marketing polish.</p>
+        </div>
+      </div>
+
+      <div class="usage-pair">
+        <strong>Pairing rule:</strong> Instrument Serif headline + DM Sans body. Italic Instrument Serif inside a headline replaces the role of color emphasis — don't combine both at once or it competes. Bronze Spice accent + italic = brand signature, not a default.
+      </div>
+    </section>
+
+    <!-- ICONS -->
+    <section id="icons">
+      <div class="section-label">04 · Iconography</div>
+      <h2 class="section-title">Icon <em>System</em></h2>
+      <p class="section-intro">Phosphor Icons is the locked icon library — never emojis, never mixed sets. Use the Thin weight by default to match the editorial feel of Instrument Serif. Bronze Spice for active states, CTAs, and key actions. Coffee Bean for navigation, UI chrome, and supporting metadata.</p>
+
+      <div class="icon-subhead">Bronze Spice — Action & Emphasis</div>
+      <div class="icon-grid">
+        <div class="icon-tile bronze"><i class="ph-thin ph-sparkle"></i><span class="label">Sparkle</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-rocket-launch"></i><span class="label">Rocket Launch</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-target"></i><span class="label">Target</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-lightning"></i><span class="label">Lightning</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-trend-up"></i><span class="label">Trend Up</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-arrow-right"></i><span class="label">Arrow Right</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-check-circle"></i><span class="label">Check Circle</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-star"></i><span class="label">Star</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-fire"></i><span class="label">Fire</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-flag"></i><span class="label">Flag</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-medal"></i><span class="label">Medal</span></div>
+        <div class="icon-tile bronze"><i class="ph-thin ph-trophy"></i><span class="label">Trophy</span></div>
+      </div>
+
+      <div class="icon-subhead" style="margin-top: 56px;">Coffee Bean — UI & Navigation</div>
+      <div class="icon-grid">
+        <div class="icon-tile coffee"><i class="ph-thin ph-stack"></i><span class="label">Stack</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-users-three"></i><span class="label">Users</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-brain"></i><span class="label">Brain</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-gear"></i><span class="label">Gear</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-chart-line"></i><span class="label">Chart Line</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-file-text"></i><span class="label">File Text</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-folder"></i><span class="label">Folder</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-magnifying-glass"></i><span class="label">Search</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-clock"></i><span class="label">Clock</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-chat-circle"></i><span class="label">Chat</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-book-open"></i><span class="label">Book Open</span></div>
+        <div class="icon-tile coffee"><i class="ph-thin ph-puzzle-piece"></i><span class="label">Puzzle</span></div>
+      </div>
+
+      <div class="icon-subhead" style="margin-top: 56px;">In Context — The Three Pillars</div>
+      <div class="icon-context">
+        <div class="ctx">
+          <div class="ctx-top">
+            <i class="ph-thin ph-brain"></i>
+            <span class="ctx-title">Clone the Expertise</span>
+          </div>
+          <div class="ctx-body">Extract senior team frameworks into AI systems juniors can use.</div>
+        </div>
+        <div class="ctx">
+          <div class="ctx-top">
+            <i class="ph-thin ph-stack"></i>
+            <span class="ctx-title">Standardize the Quality</span>
+          </div>
+          <div class="ctx-body">Prompt libraries and templates enforce consistency regardless of who produces the work.</div>
+        </div>
+        <div class="ctx">
+          <div class="ctx-top">
+            <i class="ph-thin ph-rocket-launch"></i>
+            <span class="ctx-title">Unlock the Capacity</span>
+          </div>
+          <div class="ctx-body">Shift senior people from 60/40 execution/strategy to 30/70. 4x production without hiring.</div>
+        </div>
+      </div>
+
+      <div class="usage-pair">
+        <strong>Rules:</strong> Always Phosphor — never emojis, never Material/Lucide/Heroicons. Use <strong>Thin weight</strong> by default (<code style="background: rgba(33,15,7,0.06); padding: 1px 5px; border-radius: 2px; font-size: 12px;">ph-thin</code>) to match the editorial register. Step up to Regular only when icons get small (under 16px) and Thin reads too delicate. Bronze Spice signals action — if Bronze appears, the user can or should do something. Coffee Bean is the workhorse for everything else. Browse the full set at <a href="https://phosphoricons.com" target="_blank" style="color: var(--bronze-spice); text-decoration: none; font-weight: 500;">phosphoricons.com</a>.
+      </div>
+    </section>
+
+    <!-- VOICE -->
+    <section id="voice">
+      <div class="section-label">05 · Voice & Messaging</div>
+      <h2 class="section-title">How We <em>Sound</em></h2>
+      <p class="section-intro">Operator language, not consultant language. We sound like someone who has built things — not someone who advises on them. The voice is conversational, practical, and confident. No marketing polish.</p>
+
+      <div class="voice-subhead">The Single Truth</div>
+      <div class="pull-quote">
+        Your best people carry frameworks, standards, and judgment in their heads that the rest of your team can't access. <strong>We encode that thinking into AI systems.</strong> Suddenly your whole team produces at the level of your best person — and your best people stop babysitting and start building.
+        <span class="attribution">The idea every headline, ad, slide, and email derives from</span>
+      </div>
+
+      <div class="voice-subhead">The One-Liner</div>
+      <div class="pull-quote">
+        We turn your best people's <strong>expertise</strong> into AI systems your whole team can use.
+        <span class="attribution">Locked · Do not deviate</span>
+      </div>
+
+      <div class="voice-subhead">The Liberation Statement</div>
+      <div class="pull-quote">
+        Your senior team stops being the <strong>bottleneck</strong>. They start being the <strong>architect</strong>.
+      </div>
+
+      <div class="voice-subhead">The Simplifier</div>
+      <div class="pull-quote">
+        We build the system. Your team <strong>just</strong> does the work.
+        <span class="attribution">"Just" is intentional — it collapses the distance between problem and solution</span>
+      </div>
+
+      <div class="voice-subhead">Voice Principles</div>
+      <div class="principles-grid">
+        <div class="principle">
+          <div class="num">01</div>
+          <div class="title">Operator language, not consultant language.</div>
+          <div class="body">"We build" not "we enable." "Running systems" not "strategic frameworks." Sound like someone who's shipped things.</div>
+        </div>
+        <div class="principle">
+          <div class="num">02</div>
+          <div class="title">Benefit-first, proof-second.</div>
+          <div class="body">Open with where the buyer ends up, not where they are now. Pain is context. Benefit is the lead.</div>
+        </div>
+        <div class="principle">
+          <div class="num">03</div>
+          <div class="title">Specific over vague.</div>
+          <div class="body"><strong>"9 hours back per person per week"</strong> beats "save significant time." Numbers earn trust. Adjectives don't.</div>
+        </div>
+        <div class="principle">
+          <div class="num">04</div>
+          <div class="title">Short sentences. No hedging.</div>
+          <div class="body">This isn't a category we explain carefully. It's one we own confidently. Cut qualifiers. Say the thing.</div>
+        </div>
+        <div class="principle">
+          <div class="num">05</div>
+          <div class="title">The buyer is smart and frustrated.</div>
+          <div class="body">Don't explain what AI is or why it matters. They know. They've tried it. Meet them past the education phase.</div>
+        </div>
+        <div class="principle">
+          <div class="num">06</div>
+          <div class="title">AI is the vehicle, not the product.</div>
+          <div class="body">The product is encoded human expertise. AI is how it scales. <strong>"AI without human expertise is just a super calculator. We supply the expertise."</strong></div>
+        </div>
+      </div>
+
+      <div class="voice-subhead">Vocabulary — Retire & Replace</div>
+      <table class="vocab-table">
+        <thead>
+          <tr>
+            <th style="width: 50%;">Retire This</th>
+            <th>Use This Instead</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="retire">AI enablement</td><td class="replace">AI systems built for your team</td></tr>
+          <tr><td class="retire">AI readiness assessment</td><td class="replace">Find out what your team's AI opportunity is worth</td></tr>
+          <tr><td class="retire">AI transformation</td><td class="replace">Your team, actually using AI</td></tr>
+          <tr><td class="retire">Enterprise AI adoption</td><td class="replace">Getting your whole team to use AI every day</td></tr>
+          <tr><td class="retire">Custom Claude Projects</td><td class="replace">AI workspaces built around how your team works</td></tr>
+          <tr><td class="retire">Prompt library</td><td class="replace">30 prompts that carry your best people's thinking</td></tr>
+          <tr><td class="retire">Enable (as a verb)</td><td class="replace">Build · make work · run on</td></tr>
+          <tr><td class="retire">Strategy (as a deliverable)</td><td class="replace">Working systems · running systems · live systems</td></tr>
+        </tbody>
+      </table>
+
+      <div class="voice-subhead">Buyer Mirror Phrases</div>
+      <p style="font-size: 14px; color: var(--coffee-bean); opacity: 0.75; margin-bottom: 20px; line-height: 1.55; max-width: 640px;">Phrases pulled directly from how real buyers describe their situation. Use them back at the buyer in ad copy, landing pages, and discovery call openers — they signal you understand the problem from the inside.</p>
+      <div class="mirror-list">
+        <div class="mirror">We bought the tool but nobody uses it</div>
+        <div class="mirror">Scratching the surface</div>
+        <div class="mirror">Drowning in tools</div>
+        <div class="mirror">Babysitting the output</div>
+        <div class="mirror">Missing the magic</div>
+        <div class="mirror">We tried it and it didn't stick</div>
+      </div>
+
+      <div class="voice-subhead">What We Are · What We Are Not</div>
+      <div class="are-grid">
+        <div class="are-card are">
+          <div class="label">We Are</div>
+          <ul>
+            <li><i class="ph-thin ph-check"></i><span>An <strong>operator's operator</strong> — we build and install the system, then stay close while your team owns it</span></li>
+            <li><i class="ph-thin ph-check"></i><span>A <strong>partner</strong>, not a project — the engagement is the entry point, not the deliverable</span></li>
+            <li><i class="ph-thin ph-check"></i><span>The team that <strong>encodes expertise</strong> into systems that run without the expert in the room</span></li>
+            <li><i class="ph-thin ph-check"></i><span>Builders who <strong>train alongside the build</strong> so adoption is part of the install, not a separate phase</span></li>
+          </ul>
+        </div>
+        <div class="are-card are-not">
+          <div class="label">We Are Not</div>
+          <ul>
+            <li><i class="ph-thin ph-x"></i><span>A training company. (We build systems, not curricula.)</span></li>
+            <li><i class="ph-thin ph-x"></i><span>A strategy consultant. (We ship working systems, not slide decks.)</span></li>
+            <li><i class="ph-thin ph-x"></i><span>A software vendor. (We're not selling a platform.)</span></li>
+            <li><i class="ph-thin ph-x"></i><span>A generalist AI agency. (We specialize in encoding expertise, not just automating tasks.)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="usage-pair" style="margin-top: 32px;">
+        <strong>The contrast line:</strong> Most AI consultants teach. We build, install, and stay until your team owns it.
+      </div>
+
+      <div class="voice-subhead">The Post-Pilot Reframe</div>
+      <p style="font-size: 14px; color: var(--coffee-bean); opacity: 0.75; margin-bottom: 16px; line-height: 1.55; max-width: 640px;">74% of companies are stuck in pilot purgatory. They believe in AI personally — they just couldn't transfer that experience to their team. This is the line that names the real problem.</p>
+      <div class="pull-quote">
+        The tools didn't fail you. The <strong>system around them</strong> did. You bought the car. Nobody built the roads.
+      </div>
+
+      <div class="usage-pair">
+        <strong>Tagline:</strong> Open. The four candidates we explored didn't land — none of them answered the post-pilot buyer's real question (mechanism, not destination). Holding the slot until the right line emerges. Until then, the one-liner does the work the tagline would do.
+      </div>
+    </section>
+
+    <!-- DATA -->
+    <section id="data">
+      <div class="section-label">06 · Supporting Data</div>
+      <h2 class="section-title">The Numbers That <em>Earn Trust</em></h2>
+      <p class="section-intro">Every stat below is sourced. Use them in copy, decks, ads, and discovery calls — but use them in service of a story, not as a wall of numbers. Lead with the arc, support with the stat.</p>
+
+      <div class="data-subhead">The Hero Stat — Lead With This Most Often</div>
+      <div class="hero-stat">
+        <div class="stat-block">
+          <div class="big">51 days</div>
+          <div class="label">lost per person per year to technology friction — nearly two full months</div>
+        </div>
+        <div class="stat-block">
+          <div class="big">9 hours</div>
+          <div class="label">back per person per week once the system is running. Across a team of 10 → 90 hours every week.</div>
+        </div>
+        <div class="divider-v"></div>
+        <div class="meta">Lead with the loss. Follow with the recovery. Let the math land before you explain it. · Sources: WalkMe/SAP, BCG</div>
+      </div>
+
+      <div class="data-subhead">Four Narrative Arcs</div>
+      <p style="font-size: 14px; color: var(--coffee-bean); opacity: 0.75; margin-bottom: 24px; line-height: 1.55; max-width: 640px;">Stats are clustered by the story they tell — not by where they came from. Match the arc to where the buyer is in their thinking. Lead with the arc, then drop the supporting number.</p>
+
+      <div class="arc-grid">
+
+        <div class="arc-card">
+          <div class="arc-num">Arc 01</div>
+          <div class="arc-title">The Adoption Gap</div>
+          <div class="when">Use when the buyer doesn't yet believe there's a real problem to solve. This is the "you have a bigger problem than you realize" arc.</div>
+          <div class="stat">
+            <div class="stat-number"><strong>91% / 1%</strong></div>
+            <div class="stat-body">of mid-market companies use AI. Only 1% describe their deployment as mature.</div>
+            <div class="source">Market research</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>80%</strong></div>
+            <div class="stat-body">of workers actively avoid or reject the AI tools their employer bought them.</div>
+            <div class="source">WalkMe/SAP · 3,750 workers · 14 countries</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>67-point</strong> disconnect</div>
+            <div class="stat-body">88% of executives think their teams have adequate AI tools. Only 21% of workers agree.</div>
+            <div class="source">WalkMe/SAP</div>
+          </div>
+        </div>
+
+        <div class="arc-card">
+          <div class="arc-num">Arc 02</div>
+          <div class="arc-title">The Pilot Failure</div>
+          <div class="when">Use when the buyer has already tried AI and is gun-shy. Disarms shame. Tells them their experience is the rule, not the exception.</div>
+          <div class="stat">
+            <div class="stat-number"><strong>95%</strong></div>
+            <div class="stat-body">of generative AI pilots fail to deliver ROI.</div>
+            <div class="source">MIT NANDA Institute</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>74%</strong></div>
+            <div class="stat-body">of companies are stuck in pilot purgatory. 42% scrapped AI initiatives entirely in 2025.</div>
+            <div class="source">BCG · S&amp;P Global</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>56%</strong></div>
+            <div class="stat-body">of CEOs report no financial impact from their AI investment.</div>
+            <div class="source">PwC 2026</div>
+          </div>
+        </div>
+
+        <div class="arc-card">
+          <div class="arc-num">Arc 03</div>
+          <div class="arc-title">The Cost of Standing Still</div>
+          <div class="when">Use when the buyer needs to feel urgency without being pushed. The math creates the pressure — you don't have to.</div>
+          <div class="stat">
+            <div class="stat-number"><strong>$17M</strong></div>
+            <div class="stat-body">per enterprise goes to unused software licenses annually.</div>
+            <div class="source">WalkMe/SAP</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>68%</strong></div>
+            <div class="stat-body">of workers using AI tools received zero formal training. Untrained workers are 6x more likely to say AI makes them less productive.</div>
+            <div class="source">Salesforce · BCG</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>40%</strong></div>
+            <div class="stat-body">of digital transformation spend underperforms due to adoption failures. Average budget: $54.2M.</div>
+            <div class="source">Industry research</div>
+          </div>
+        </div>
+
+        <div class="arc-card">
+          <div class="arc-num">Arc 04</div>
+          <div class="arc-title">The Upside When It Works</div>
+          <div class="when">Use when the buyer needs to see the destination. Pair with the financial case below to close the loop.</div>
+          <div class="stat">
+            <div class="stat-number"><strong>5x</strong> more productive</div>
+            <div class="stat-body">AI super-users save 9 hours per week vs. 2 for laggards. Across a team of 10 → 90 hours per week.</div>
+            <div class="source">BCG</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>3.8x</strong> higher ROI</div>
+            <div class="stat-body">Organizations with mature AI enablement see 3.8x higher ROI on AI technology investments.</div>
+            <div class="source">BCG</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><strong>10-20-70</strong></div>
+            <div class="stat-body">AI success is 10% algorithms, 20% technology, 70% people, process, and organizational readiness. Most consultants chase the 30%. We build the 70%.</div>
+            <div class="source">BCG · Use the rule by name</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="data-subhead">The Financial Case — Recite From Memory</div>
+      <div class="financial-case">
+        <div class="fc-step">
+          <div class="fc-num">$20K</div>
+          <div class="fc-label">One-Time Engagement</div>
+        </div>
+        <div class="fc-step">
+          <div class="fc-num accent">$138K–$414K</div>
+          <div class="fc-label">Annual Value Recovered</div>
+        </div>
+        <div class="fc-step">
+          <div class="fc-num">7x–21x</div>
+          <div class="fc-label">ROI Depending on Team Size</div>
+        </div>
+      </div>
+
+      <div class="usage-pair">
+        <strong>How to use ROI in a conversation:</strong> Don't lead with hours saved — leaders know reclaimed hours don't automatically hit the P&amp;L. Lead with one of three frames: <strong>(1) capacity is the constraint</strong>, not effort — "you're leaving revenue on the table because your team is the bottleneck"; <strong>(2) the next hire you won't have to make</strong> — "a fully-loaded mid-size hire is $70K–$120K. Payroll is permanent. The engagement is one-time"; <strong>(3) revenue per employee</strong> — "same team, same salaries, more output, better margin."
+      </div>
+
+      <div class="usage-pair" style="background: var(--snow); border: 1px solid rgba(33, 15, 7, 0.12);">
+        <strong>Honesty rule:</strong> Every number above is sourced. Never round up. Never combine stats from incompatible studies. If a stat doesn't have a citation in this guide, it doesn't go in a deck or ad. Numbers are credibility currency — once spent on a bad stat, they're hard to earn back.
+      </div>
+    </section>
+
+    <footer>
+      <div>Storystak AI · Brand Guide</div>
+      <div>Source of Truth · v1.0</div>
+    </footer>
+
+  </div>
+
+  <div class="toast" id="toast">Copied<span class="toast-hex" id="toastHex"></span></div>
+
+  <script>
+    (function() {
+      const toast = document.getElementById('toast');
+      const toastHex = document.getElementById('toastHex');
+      let toastTimeout;
+
+      function showToast(hex) {
+        toastHex.textContent = hex;
+        toast.classList.add('show');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 1600);
+      }
+
+      function copyHex(hex, swatchEl) {
+        const value = hex.toUpperCase();
+        const fallback = () => {
+          const ta = document.createElement('textarea');
+          ta.value = value;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(value).catch(fallback);
+        } else {
+          fallback();
+        }
+
+        showToast(value);
+
+        if (swatchEl && swatchEl.classList.contains('color-swatch')) {
+          const hint = swatchEl.querySelector('.copy-hint');
+          if (hint) {
+            const original = hint.textContent;
+            hint.textContent = 'Copied ✓';
+            swatchEl.classList.add('copied');
+            setTimeout(() => {
+              hint.textContent = original;
+              swatchEl.classList.remove('copied');
+            }, 1400);
+          }
+        }
+      }
+
+      document.querySelectorAll('[data-hex]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          copyHex(el.getAttribute('data-hex'), el.classList.contains('color-swatch') ? el : null);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

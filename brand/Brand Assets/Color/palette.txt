@@ -1,0 +1,31 @@
+/* Coolors Exported Palette - https://coolors.co/c45d2c-210f07-f7e3da-fcf7f5-0f0f0f */
+
+- CSV
+
+c45d2c,210f07,f7e3da,fcf7f5,0f0f0f
+
+- With #
+
+#c45d2c, #210f07, #f7e3da, #fcf7f5, #0f0f0f
+
+- Array
+
+["c45d2c","210f07","f7e3da","fcf7f5","0f0f0f"]
+
+- Object
+
+{"Bronze Spice":"c45d2c","Coffee Bean":"210f07","Powder Petal":"f7e3da","Snow":"fcf7f5","Onyx":"0f0f0f"}
+
+- Extended Array
+
+[{"name":"Bronze Spice","hex":"c45d2c","rgb":[196,93,44],"cmyk":[0,53,78,23],"hsb":[19,78,77],"hsl":[19,63,47],"lab":[52,38,46]},{"name":"Coffee Bean","hex":"210f07","rgb":[33,15,7],"cmyk":[0,55,79,87],"hsb":[18,79,13],"hsl":[18,65,8],"lab":[6,8,6]},{"name":"Powder Petal","hex":"f7e3da","rgb":[247,227,218],"cmyk":[0,8,12,3],"hsb":[19,12,97],"hsl":[19,64,91],"lab":[92,5,7]},{"name":"Snow","hex":"fcf7f5","rgb":[252,247,245],"cmyk":[0,2,3,1],"hsb":[17,3,99],"hsl":[17,54,97],"lab":[98,1,2]},{"name":"Onyx","hex":"0f0f0f","rgb":[15,15,15],"cmyk":[0,0,0,94],"hsb":[0,0,6],"hsl":[0,0,6],"lab":[4,0,0]}]
+
+- XML
+
+<palette>
+  <color name="Bronze Spice" hex="c45d2c" r="196" g="93" b="44" />
+  <color name="Coffee Bean" hex="210f07" r="33" g="15" b="7" />
+  <color name="Powder Petal" hex="f7e3da" r="247" g="227" b="218" />
+  <color name="Snow" hex="fcf7f5" r="252" g="247" b="245" />
+  <color name="Onyx" hex="0f0f0f" r="15" g="15" b="15" />
+</palette>
