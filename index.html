@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Storystak AI — Brand Guide</title>
+<link rel="icon" type="image/svg+xml" href="brand/svg/Storystak-ai-icon-primary.svg">
+<link rel="alternate icon" type="image/png" href="brand/png-sm/Storystak-ai-icon-primary-sm.png">
+<link rel="apple-touch-icon" href="brand/png-lg/Storystak-ai-icon-primary-lg.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -240,6 +243,68 @@
     text-transform: uppercase;
   }
   .logo-section-title:first-child { margin-top: 0; }
+
+  /* IMAGERY */
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .image-card {
+    border: 1px solid rgba(33, 15, 7, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--snow);
+  }
+  .image-card .preview {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--coffee-bean);
+  }
+  .image-card .preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .image-card .info {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(33, 15, 7, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .image-card .info .name {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--coffee-bean);
+  }
+  .image-card .info .usage {
+    font-size: 11px;
+    color: var(--coffee-bean);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .image-card .downloads {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(33, 15, 7, 0.08);
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+  }
+  .image-card .downloads a {
+    color: var(--bronze-spice);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  .image-card .downloads a:hover { text-decoration: underline; }
 
   /* COLOR */
   .color-grid {
@@ -1058,6 +1123,7 @@
       <a href="#colors">Color</a>
       <a href="#typography">Typography</a>
       <a href="#icons">Icons</a>
+      <a href="#imagery">Imagery</a>
       <a href="#voice">Voice</a>
       <a href="#data">Data</a>
     </nav>
@@ -1409,9 +1475,32 @@
       </div>
     </section>
 
+    <!-- IMAGERY -->
+    <section id="imagery">
+      <div class="section-label">05 · Imagery</div>
+      <h2 class="section-title">Hero <em>Imagery</em></h2>
+      <p class="section-intro">The hero library is intentionally small — one treated road photograph that carries the brand's sense of forward motion. Use it full-bleed in hero sections, social previews, and ad creative. Reach for WEBP first; JPG fallback for older platforms.</p>
+
+      <div class="image-grid">
+        <div class="image-card">
+          <a class="preview" href="road-hero-treated.webp" download title="Download WEBP">
+            <img src="road-hero-treated.webp" alt="Road — treated hero">
+          </a>
+          <div class="info">
+            <span class="name">Road · Treated Hero</span>
+            <span class="usage">Hero sections, social, ads</span>
+          </div>
+          <div class="downloads">
+            <a href="road-hero-treated.webp" download>WEBP · 334KB</a>
+            <a href="road-hero-treated.jpg" download>JPG · 1.3MB</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- VOICE -->
     <section id="voice">
-      <div class="section-label">05 · Voice & Messaging</div>
+      <div class="section-label">06 · Voice & Messaging</div>
       <h2 class="section-title">How We <em>Sound</em></h2>
       <p class="section-intro">Operator language, not consultant language. We sound like someone who has built things — not someone who advises on them. The voice is conversational, practical, and confident. No marketing polish.</p>
 
@@ -1542,7 +1631,7 @@
 
     <!-- DATA -->
     <section id="data">
-      <div class="section-label">06 · Supporting Data</div>
+      <div class="section-label">07 · Supporting Data</div>
       <h2 class="section-title">The Numbers That <em>Earn Trust</em></h2>
       <p class="section-intro">Every stat below is sourced. Use them in copy, decks, ads, and discovery calls — but use them in service of a story, not as a wall of numbers. Lead with the arc, support with the stat.</p>
 
