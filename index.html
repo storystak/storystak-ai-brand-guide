@@ -1100,6 +1100,75 @@
     transition: opacity 0.2s;
   }
   nav.toc a:hover { opacity: 1; color: var(--bronze-spice); }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 640px) {
+    /* Page frame */
+    .page { padding: 36px 20px 72px; }
+
+    /* Header */
+    header.brand-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding-bottom: 24px;
+      margin-bottom: 48px;
+    }
+    .brand-header .title {
+      font-size: 38px;
+      gap: 14px;
+      line-height: 1.05;
+    }
+    .brand-header .title .header-logo { height: 40px; }
+    .brand-header .title .divider { display: none; }
+    .brand-header .meta { text-align: left; }
+
+    /* TOC */
+    nav.toc {
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      margin-bottom: 40px;
+      font-size: 11px;
+    }
+
+    /* Sections */
+    section { margin-bottom: 64px; }
+    .section-title { font-size: 34px; line-height: 1.1; }
+    .section-intro { font-size: 15px; margin-bottom: 32px; }
+
+    /* Logos */
+    .logo-grid { grid-template-columns: 1fr; gap: 16px; }
+    .logo-card .preview { height: 180px; padding: 24px; }
+    .logo-card .preview .download-hint { opacity: 1; } /* touch: no hover */
+    .logo-card .info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .logo-card .downloads { flex-wrap: wrap; gap: 14px; }
+    .logo-section-title { margin: 40px 0 16px; }
+
+    /* Imagery */
+    .image-card .info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .image-card .downloads { flex-wrap: wrap; gap: 14px; }
+
+    /* Vocab table — tighten so it fits */
+    .vocab-table { font-size: 12px; }
+    .vocab-table thead th { padding: 10px 12px; font-size: 10px; }
+    .vocab-table tbody td { padding: 10px 12px; }
+
+    /* Hero stat */
+    .hero-stat { padding: 28px; }
+    .hero-stat .stat-block .big { font-size: 48px; }
+    .hero-stat .stat-block .label { font-size: 12px; }
+
+    /* Data subhead spacing */
+    .data-subhead { margin: 40px 0 16px; }
+  }
 </style>
 </head>
 <body>
