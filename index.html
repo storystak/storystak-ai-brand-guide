@@ -1009,64 +1009,6 @@
     margin-top: 2px;
   }
 
-  /* Financial case */
-  .financial-case {
-    background: var(--powder-petal);
-    border-radius: 4px;
-    padding: 40px 48px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    align-items: center;
-    position: relative;
-  }
-  @media (max-width: 760px) {
-    .financial-case { grid-template-columns: 1fr; padding: 32px; gap: 24px; }
-  }
-  .financial-case .fc-step {
-    text-align: center;
-    position: relative;
-  }
-  .financial-case .fc-step::after {
-    content: "→";
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--bronze-spice);
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .financial-case .fc-step:last-child::after { display: none; }
-  @media (max-width: 760px) {
-    .financial-case .fc-step::after {
-      right: 50%;
-      top: auto;
-      bottom: -16px;
-      transform: translateX(50%) rotate(90deg);
-    }
-  }
-  .financial-case .fc-num {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: 44px;
-    color: var(--coffee-bean);
-    letter-spacing: -0.02em;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .financial-case .fc-num.accent { color: var(--bronze-spice); }
-  .financial-case .fc-label {
-    font-family: var(--font-body);
-    font-size: 12px;
-    color: var(--coffee-bean);
-    opacity: 0.7;
-    line-height: 1.4;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-  }
-
   /* FOOTER */
   footer {
     margin-top: 80px;
@@ -1183,7 +1125,7 @@
       </h1>
       <div class="meta">
         <div>Source of Truth</div>
-        <div>v1.0 · May 2026</div>
+        <div>v2.0 · July 2026</div>
       </div>
     </header>
 
@@ -1444,7 +1386,7 @@
           <div class="role">Section titles, hero headlines, pull quotes. Use <em>italic</em> as a highlight — not for full sentences.</div>
         </div>
         <div class="type-sample display">
-          We turn your best people's <em>expertise</em> into AI systems your whole team can use.
+          We build your company a <em>Vault</em>: one governed source of truth for your voice, your numbers, and your standards.
           <div class="scale">
             <span class="lg">Display 56</span>
             <span class="md">H2 — 40</span>
@@ -1467,7 +1409,7 @@
             <span class="w-semibold">Semibold — Buttons and emphasis</span>
             <span class="w-bold">Bold — Stat callouts</span>
           </div>
-          <p class="para">Clone the expertise. Standardize the quality. Unlock the capacity. Three pillars, one system. Body copy in DM Sans Regular at 15–16px sets the default voice — practical, direct, no marketing polish.</p>
+          <p class="para">Your context, compounding. Your workflows, optimized. Your capacity, unlocked. Three pillars, one system. Body copy in DM Sans Regular at 15–16px sets the default voice — practical, direct, no marketing polish.</p>
         </div>
       </div>
 
@@ -1518,17 +1460,17 @@
       <div class="icon-context">
         <div class="ctx">
           <div class="ctx-top">
-            <i class="ph-thin ph-brain"></i>
-            <span class="ctx-title">Clone the Expertise</span>
+            <i class="ph-thin ph-vault"></i>
+            <span class="ctx-title">The Vault — Context That Compounds</span>
           </div>
-          <div class="ctx-body">Extract senior team frameworks into AI systems juniors can use.</div>
+          <div class="ctx-body">Company knowledge captured once, served live to every AI tool the team already uses.</div>
         </div>
         <div class="ctx">
           <div class="ctx-top">
-            <i class="ph-thin ph-stack"></i>
-            <span class="ctx-title">Standardize the Quality</span>
+            <i class="ph-thin ph-flow-arrow"></i>
+            <span class="ctx-title">Optimized Workflows</span>
           </div>
-          <div class="ctx-body">Prompt libraries and templates enforce consistency regardless of who produces the work.</div>
+          <div class="ctx-body">Existing processes rebuilt around AI — prompt libraries, systems, and guardrails enforce one quality bar.</div>
         </div>
         <div class="ctx">
           <div class="ctx-top">
@@ -1575,13 +1517,13 @@
 
       <div class="voice-subhead">The Single Truth</div>
       <div class="pull-quote">
-        Your best people carry frameworks, standards, and judgment in their heads that the rest of your team can't access. <strong>We encode that thinking into AI systems.</strong> Suddenly your whole team produces at the level of your best person — and your best people stop babysitting and start building.
+        Your company's knowledge — voice, numbers, customers, standards — is scattered and re-gathered by hand every time someone opens an AI chat. <strong>We capture it once into a governed Vault and rebuild your workflows around it.</strong> Every output gets faster and truer, from everyone on the team.
         <span class="attribution">The idea every headline, ad, slide, and email derives from</span>
       </div>
 
       <div class="voice-subhead">The One-Liner</div>
       <div class="pull-quote">
-        We turn your best people's <strong>expertise</strong> into AI systems your whole team can use.
+        We build your company a <strong>Vault</strong>: one governed source of truth for your voice, your numbers, and your standards. The AI tools your team already uses read from it.
         <span class="attribution">Locked · Do not deviate</span>
       </div>
 
@@ -1626,7 +1568,7 @@
         <div class="principle">
           <div class="num">06</div>
           <div class="title">AI is the vehicle, not the product.</div>
-          <div class="body">The product is encoded human expertise. AI is how it scales. <strong>"AI without human expertise is just a super calculator. We supply the expertise."</strong></div>
+          <div class="body">The product is the company's knowledge made usable — the Vault and the workflows built on it. <strong>"AI without human expertise is just a super calculator"</strong> survives as origin story, not as the pitch.</div>
         </div>
       </div>
 
@@ -1668,7 +1610,7 @@
           <ul>
             <li><i class="ph-thin ph-check"></i><span>An <strong>operator's operator</strong> — we build and install the system, then stay close while your team owns it</span></li>
             <li><i class="ph-thin ph-check"></i><span>A <strong>partner</strong>, not a project — the engagement is the entry point, not the deliverable</span></li>
-            <li><i class="ph-thin ph-check"></i><span>The team that <strong>encodes expertise</strong> into systems that run without the expert in the room</span></li>
+            <li><i class="ph-thin ph-check"></i><span>The team that turns the company's knowledge into a <strong>governed, living system</strong> — one that runs without the expert in the room</span></li>
             <li><i class="ph-thin ph-check"></i><span>Builders who <strong>train alongside the build</strong> so adoption is part of the install, not a separate phase</span></li>
           </ul>
         </div>
@@ -1678,7 +1620,7 @@
             <li><i class="ph-thin ph-x"></i><span>A training company. (We build systems, not curricula.)</span></li>
             <li><i class="ph-thin ph-x"></i><span>A strategy consultant. (We ship working systems, not slide decks.)</span></li>
             <li><i class="ph-thin ph-x"></i><span>A software vendor. (We're not selling a platform.)</span></li>
-            <li><i class="ph-thin ph-x"></i><span>A generalist AI agency. (We specialize in encoding expertise, not just automating tasks.)</span></li>
+            <li><i class="ph-thin ph-x"></i><span>A generalist AI agency. (We specialize in living context systems and workflow optimization, not one-off automations.)</span></li>
           </ul>
         </div>
       </div>
@@ -1789,7 +1731,7 @@
         <div class="arc-card">
           <div class="arc-num">Arc 04</div>
           <div class="arc-title">The Upside When It Works</div>
-          <div class="when">Use when the buyer needs to see the destination. Pair with the financial case below to close the loop.</div>
+          <div class="when">Use when the buyer needs to see the destination.</div>
           <div class="stat">
             <div class="stat-number"><strong>5x</strong> more productive</div>
             <div class="stat-body">AI super-users save 9 hours per week vs. 2 for laggards. Across a team of 10 → 90 hours per week.</div>
@@ -1809,26 +1751,6 @@
 
       </div>
 
-      <div class="data-subhead">The Financial Case — Recite From Memory</div>
-      <div class="financial-case">
-        <div class="fc-step">
-          <div class="fc-num">$20K</div>
-          <div class="fc-label">One-Time Engagement</div>
-        </div>
-        <div class="fc-step">
-          <div class="fc-num accent">$138K–$414K</div>
-          <div class="fc-label">Annual Value Recovered</div>
-        </div>
-        <div class="fc-step">
-          <div class="fc-num">7x–21x</div>
-          <div class="fc-label">ROI Depending on Team Size</div>
-        </div>
-      </div>
-
-      <div class="usage-pair">
-        <strong>How to use ROI in a conversation:</strong> Don't lead with hours saved — leaders know reclaimed hours don't automatically hit the P&amp;L. Lead with one of three frames: <strong>(1) capacity is the constraint</strong>, not effort — "you're leaving revenue on the table because your team is the bottleneck"; <strong>(2) the next hire you won't have to make</strong> — "a fully-loaded mid-size hire is $70K–$120K. Payroll is permanent. The engagement is one-time"; <strong>(3) revenue per employee</strong> — "same team, same salaries, more output, better margin."
-      </div>
-
       <div class="usage-pair" style="background: var(--snow); border: 1px solid rgba(33, 15, 7, 0.12);">
         <strong>Honesty rule:</strong> Every number above is sourced. Never round up. Never combine stats from incompatible studies. If a stat doesn't have a citation in this guide, it doesn't go in a deck or ad. Numbers are credibility currency — once spent on a bad stat, they're hard to earn back.
       </div>
@@ -1836,7 +1758,7 @@
 
     <footer>
       <div>Storystak AI · Brand Guide</div>
-      <div>Source of Truth · v1.0</div>
+      <div>Source of Truth · v2.0</div>
     </footer>
 
   </div>
